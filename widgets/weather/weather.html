@@ -1,0 +1,10 @@
+<div>
+	<h1>{ data.location.city }</h1>
+	 
+	<h2>{ data.item.condition.temp | to_celsius }</h2>
+	 
+	<p class="condition">{ data.item.condition.text }</p>
+	 
+	<p class="updated-at">{ data.item.condition.date }</p>
+</div>
+<i class="fa climacon icon-background" rv-climacon="data.item.condition.code"></i>
