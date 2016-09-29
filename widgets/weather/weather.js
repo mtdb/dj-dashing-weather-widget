@@ -75,6 +75,7 @@ Dashing.widgets.Weather = function(dashboard) {
     this.row = 1;
     this.col = 1;
     this.data = {};
+    this.scope = {};
     this.WOEID = 395269;
     this.getWidget = function () {
         return widget;
@@ -92,6 +93,7 @@ Dashing.widgets.Weather = function(dashboard) {
             var city = data.query.results.channel.location.city,
                 condition = data.query.results.channel.item.condition;
             $.extend(self.data, data.query.results.channel);
+            $.extend(self.scope, data.query.results.channel);
         });
     };
     this.interval = 300000; // five minutes
